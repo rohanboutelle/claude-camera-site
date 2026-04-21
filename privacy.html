@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Claude Camera</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f0f11;--card:#1a1a1e;--border:rgba(255,255,255,0.08);--text:#f0f0f2;--dim:#9a9aa5;--accent:#d97706}
+html,body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,15,17,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--text);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{color:var(--dim);font-size:14px;text-decoration:none;padding:6px 12px;border-radius:7px;transition:color .15s,background .15s}
+.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.07)}
+.nav-cta{background:var(--accent)!important;color:#fff!important;font-weight:600}
+.container{max-width:720px;margin:0 auto;padding:100px 24px 80px}
+h1{font-size:36px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
+.meta{color:var(--dim);font-size:14px;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+h2{font-size:18px;font-weight:600;margin:36px 0 12px;color:var(--text)}
+p{margin-bottom:16px;color:#bbb;line-height:1.75}
+ul{margin:0 0 20px 20px;color:#bbb}
+li{margin-bottom:10px;line-height:1.65}
+strong{color:var(--text)}
+code{background:rgba(255,255,255,.08);border-radius:4px;padding:2px 6px;font-size:13px;font-family:'SF Mono',Monaco,monospace}
+a{color:#60a5fa;text-decoration:none}
+a:hover{text-decoration:underline}
+hr{border:none;border-top:1px solid var(--border);margin:40px 0}
+footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    ← Claude Camera
+  </a>
+  <div class="nav-links">
+    <a href="demo.html">Try demo</a>
+    <a href="https://chrome.google.com/webstore" class="nav-cta">Install free →</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Claude Camera Chrome Extension &nbsp;·&nbsp; Last updated: April 2026</p>
+
+  <p>Claude Camera is a browser extension that lets you take photos, capture screen regions, and annotate images before attaching them to Claude (claude.ai). This policy explains what data the extension accesses and how it is handled.</p>
+
+  <h2>Data we access</h2>
+  <ul>
+    <li><strong>Camera feed</strong> — accessed only when you open the camera modal inside Claude. The stream is never recorded, uploaded, or stored beyond your active session.</li>
+    <li><strong>Screen content</strong> — when you use "Capture region" or "Full tab", the visible content of your current tab is captured as an image. That image is stored locally on your device only.</li>
+    <li><strong>Extension settings</strong> — your last-used camera direction, annotation colour, and prompt text are saved locally via <code>chrome.storage.local</code>.</li>
+    <li><strong>Saved screenshots</strong> — screenshots you capture are stored locally in <code>chrome.storage.local</code>. They never leave your device unless you manually attach them to a Claude conversation.</li>
+  </ul>
+
+  <h2>Data we do not collect</h2>
+  <ul>
+    <li>We do not collect, transmit, or sell any personal data.</li>
+    <li>We do not have servers. All storage is local to your browser.</li>
+    <li>We do not use analytics, tracking pixels, or third-party SDKs.</li>
+    <li>We do not access your browsing history, bookmarks, or passwords.</li>
+  </ul>
+
+  <h2>Permissions explained</h2>
+  <ul>
+    <li><strong>activeTab</strong> — required to capture the visible area of your current tab when you click "Capture region" or "Full tab".</li>
+    <li><strong>scripting</strong> — required to inject the region-selection overlay into your current tab when you choose to capture a region.</li>
+    <li><strong>storage / unlimitedStorage</strong> — required to save screenshots and settings locally on your device.</li>
+    <li><strong>Camera (via getUserMedia)</strong> — requested at runtime only when you open the camera inside Claude. You can deny this permission and the rest of the extension will still work.</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>All data is stored locally in your browser. You can delete saved screenshots at any time using the extension popup. Uninstalling the extension removes all stored data.</p>
+
+  <h2>Third parties</h2>
+  <p>This extension does not share data with any third parties. Images you attach to Claude are sent to Anthropic's servers as part of your normal Claude conversation — that is governed by <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a>.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes materially, the updated version will be published at this URL with a new date at the top.</p>
+
+  <h2>Contact</h2>
+  <p>Questions? Open an issue on the project's GitHub repository.</p>
+
+  <hr>
+  <p style="color:#666;font-size:13px">Claude Camera is an independent project and is not affiliated with Anthropic.</p>
+</div>
+
+<footer>Claude Camera &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="demo.html">Demo</a></footer>
+</body>
+</html>
